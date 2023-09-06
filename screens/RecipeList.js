@@ -35,12 +35,14 @@ export default function RecipeList() {
 
 
 
-    return <ScrollView stickyHeaderIndices={[0]} style={{backgroundColor: 'gray'}}>
-        <TextInput style={{marginBottom: 3}}
+    return <View>
+        <TextInput
             value={search} 
             onChangeText={text => setSearch(text)}
             placeholder="Search">
         </TextInput>
+
+        <ScrollView style={styles.scrollZone}>
 
         {messages ?
             messages.filter((m) => m.name.toLowerCase().includes(search.toLowerCase()))
@@ -54,10 +56,12 @@ export default function RecipeList() {
             : <Text>Loading</Text>
         }
     </ScrollView>
+    </View>
 }
 
 const styles = StyleSheet.create({
-    messCard: {
-        
+    scrollZone: {
+        backgroundColor: 'gray',
+        height: '93%'
     }
 });

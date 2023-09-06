@@ -25,7 +25,6 @@ export default function AddRecipe(props) {
 
     
     useEffect(() => {
-        console.log(first);
         if(!first){
             let idVal = new Date().getTime();
             console.log(idVal);
