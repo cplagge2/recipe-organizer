@@ -10,7 +10,7 @@ import RecipeStack from './navigation/RecipeStack';
 
 export default function App() {
 
-  const [id, setID] = useState(0);
+  const [id, setID] = useState(false);
   const botNav = createBottomTabNavigator();
 
   return (
